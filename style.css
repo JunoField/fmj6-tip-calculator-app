@@ -1,0 +1,26 @@
+:root{
+    --strongCyan: hsl(172, 67%, 45%);
+
+    --veryDarkCyan: hsl(183, 100%, 15%);
+    --darkGrayishCyan: hsl(186, 14%, 43%);
+    --grayishCyan: hsl(184, 14%, 56%);
+    --lightGrayishCyan: hsl(185, 41%, 84%);
+    --veryLightGrayishCyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body{
+    background-color: var(--lightGrayishCyan);
+    text-align: center;
+    margin: 0px;
+}
+
+.logo{
+    margin: 51px auto 35px auto;
+}
+
+main{
+    background-color: var(--veryLightGrayishCyan);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
