@@ -34,19 +34,26 @@ main{
     color: var(--darkGrayishCyan);
 }
 
+label{
+    margin-bottom: 10px;
+    display: inline-block;
+}
 
 input{
-    box-sizing: border-box;
-    width: 100%;
-    padding-inline: 17px;
-    border-radius: 5px;
-    background-color: var(--veryLightGrayishCyan);
-    color: var(--veryDarkCyan);
     border: none;
-    height: 48px;
-    text-align: right;
+    box-sizing: border-box;
     font-size: 1.5em;
     font-family: inherit;
+}
+
+input[type=number]{
+    border-radius: 5px;
+    width: 100%;
+    padding-inline: 17px;
+    background-color: var(--veryLightGrayishCyan);
+    color: var(--veryDarkCyan);
+    text-align: right;
+    height: 48px;
 }
 
 /*Disable +- buttons in number input*/
@@ -68,3 +75,36 @@ input[type=number] {
     background-position-y: center;
     background-position-x: 20px;
 }
+
+.tip-select-section{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 16px;
+
+}
+
+
+input[type=radio]{
+    appearance: none;
+}
+
+input[type=radio]:checked ~ div:first-of-type{
+    background-color: var(--grayishCyan);
+    color: var(--veryDarkCyan);
+
+}
+
+input[type=radio] ~ div:first-of-type{
+    background-color: var(--veryDarkCyan);
+    color: var(--veryLightGrayishCyan);
+    font-size: 1.5em;
+    height: 48px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
