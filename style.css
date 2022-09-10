@@ -34,6 +34,7 @@ main{
     color: var(--darkGrayishCyan);
 }
 
+
 input{
     box-sizing: border-box;
     width: 100%;
@@ -59,4 +60,11 @@ input[type=number]::-webkit-outer-spin-button {
 
 input[type=number] {
     -moz-appearance:textfield; /* Firefox */
+}
+
+.input-bill{
+    background-image: url("./images/icon-dollar.svg");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 20px;
 }
