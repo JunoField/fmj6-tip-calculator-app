@@ -56,6 +56,8 @@ input[type=number]{
     text-align: right;
     height: 48px;
     margin-bottom: 32px;
+    background-repeat: no-repeat;
+    background-position-y: center;
 }
 
 /*Disable +- buttons in number input*/
@@ -70,8 +72,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .input-bill{
     background-image: url("./images/icon-dollar.svg");
-    background-repeat: no-repeat;
-    background-position-y: center;
+
     background-position-x: 20px;
 }
 
@@ -83,6 +84,7 @@ input[type=number]::-webkit-outer-spin-button {
     row-gap: 6px;
     column-gap: 17px;
     margin-top: -17px;
+    margin-bottom: 45px;
 }
 
 .tip-select-section label{
@@ -113,12 +115,8 @@ input[type=radio] ~ div:first-of-type{
     border-radius: 5px;
 }
 
-#tip-custom-txt{
-    background-color: var(--veryLightGrayishCyan);
-    color: var(--darkGrayishCyan);
-}
 
-#tip-custom ~ div:first-of-type{
-    background-color: var(--grayishCyan);
+.input-no-ppl{
+    background-image: url("./images/icon-person.svg");
+    background-position-x: 18px;
 }
-
