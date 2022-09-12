@@ -20,7 +20,7 @@
   <main>
     <form>
       <label>Bill</label>
-      <input type="number" step="0.01" min="0.00" class="input-bill">
+      <input type="number" step="0.01" min="0.00" class="num-input input-bill">
 
 
       <label>Select Tip %</label>
@@ -30,12 +30,13 @@
         <label for="tip-15pc"><input type="radio" name="tip-percent" id="tip-15pc"/><div>15%</div></label>
         <label for="tip-25pc"><input type="radio" name="tip-percent" id="tip-25pc"/><div>25%</div></label>
         <label for="tip-50pc"><input type="radio" name="tip-percent" id="tip-50pc"/><div>50%</div></label>
-        <label for="tip-custom"><input type="radio" name="tip-percent" id="tip-custom"/><div id="tip-custom-txt">Custom</div></label>
+        
+        <input type="number" step="1" min="0" placeholder="Custom" class="num-input custom-input">
       </div>
 
 
       <label>Number of People</label>
-      <input type="number" step="0" min="0" class="input-no-ppl">
+      <input type="number" step="1" min="0" class="num-input input-no-ppl">
     </form>
 
     <section class="results-section">

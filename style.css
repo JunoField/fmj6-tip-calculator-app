@@ -46,7 +46,7 @@ input{
     font-family: inherit;
 }
 
-input[type=number]{
+.num-input{
     -moz-appearance:textfield; /* Firefox */
     border-radius: 5px;
     width: 100%;
@@ -115,6 +115,16 @@ input[type=radio] ~ div:first-of-type{
     border-radius: 5px;
 }
 
+.custom-input{
+    text-align: center;
+    margin-top: 24px;
+    box-sizing: border-box;
+    margin-bottom: -13px;
+}
+
+.custom-input::placeholder{
+    color: var(--darkGrayishCyan);
+}
 
 .input-no-ppl{
     background-image: url("./images/icon-person.svg");
