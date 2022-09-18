@@ -9,6 +9,7 @@ document.getElementById("input-custom").addEventListener("keypress", customEntry
 
 document.getElementById("input-bill").addEventListener("keypress", updateForm);
 document.getElementById("input-no-ppl").addEventListener("keypress", updateForm);
+document.getElementById("button-reset").addEventListener("click", reset);
 
 
 function clearRadios(){
@@ -50,5 +51,14 @@ function getSelectedTip(){
     return document.querySelector('input[name="tip-percent"]:checked').id.replace(/\D/g,'');
 }
 
+function reset(){
+    document.getElementById("input-bill").value = "";
+    document.getElementById("input-custom").value = "";
+    document.getElementById("input-no-ppl").value = "";
+    clearRadios();
 
+
+    document.getElementById("tip-result-display").innerHTML = "$0.00";
+    document.getElementById("total-result-display").innerHTML = "$0.00";
+}
 
