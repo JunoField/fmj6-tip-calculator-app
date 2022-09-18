@@ -97,11 +97,7 @@ input[type=radio]{
 
 }
 
-input[type=radio]:checked ~ div:first-of-type{
-    background-color: var(--strongCyan);
-    color: var(--veryDarkCyan);
 
-}
 
 input[type=radio] ~ div:first-of-type{
     background-color: var(--veryDarkCyan);
@@ -113,6 +109,17 @@ input[type=radio] ~ div:first-of-type{
     align-items: center;
     justify-content: center;
     border-radius: 5px;
+}
+
+input[type=radio]:checked ~ div:first-of-type{
+    background-color: var(--strongCyan);
+    color: var(--veryDarkCyan);
+
+}
+
+input[type=radio] ~ div:first-of-type:hover{
+    background-color: var(--lightGrayishCyan);
+    color: var(--veryDarkCyan);
 }
 
 .custom-input{
@@ -180,6 +187,10 @@ input[type=radio] ~ div:first-of-type{
     text-transform: uppercase;
     font-size: 1.25em;
     margin: 31px 0px 4px 0px;
+}
+
+.results-section button:hover{
+    background-color: var(--lightGrayishCyan);
 }
 
 .attribution{
