@@ -136,6 +136,7 @@ input[type=radio] ~ div:first-of-type{
     border-radius: 15px;
     margin-inline: -7px;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 .result-line{
@@ -197,21 +198,60 @@ input[type=radio] ~ div:first-of-type{
     }
 
     main{
-        width: 706px;
+        box-sizing: border-box;
+        width: 922px;
+        height: 484px;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-
         display: flex;
-        
+        padding: 32px;
+        gap: 33px;
     }
 
     form{
         width: 50%;
+        padding-block: 13px;
+        padding-inline: 15px;
+    }
+
+    .tip-select-section{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+        column-gap: 14px;
+    }
+
+    .custom-input{
+        padding-inline: 10px;
     }
 
     .results-section{
         width: 50%;
+        margin-inline: 0px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
     }
+
+    .result-line{
+        margin: 0px 0px 26px 0px;
+    }
+
+    .result-label{
+        margin: 14px 0px 0px 0px;
+    }
+
+    .results-section button{
+        align-self: flex-end;
+        margin: auto 0px 0px 0px;
+    }
+    
+    
+
+    .result-display{
+        font-size: 2.9em;
+    }
+
+
 }
