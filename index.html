@@ -11,32 +11,32 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet"> 
   
   <title>Frontend Mentor | Tip calculator app</title>
-
+  <script src="./calculate.js" defer></script>
 </head>
 <body>
   
   <img src="./images/logo.svg" class="logo">
 
   <main>
-    <form>
+    <form id="input-form">
       <label>Bill</label>
-      <input type="number" step="0.01" min="0.00" class="num-input input-bill">
+      <input type="number" step="0.01" min="0.00" class="num-input input-bill" id="input-bill">
 
 
       <label>Select Tip %</label>
-      <div class="tip-select-section">
-        <label for="tip-5pc"><input type="radio" name="tip-percent" id="tip-5pc"/><div>5%</div></label>
-        <label for="tip-10pc"><input type="radio" name="tip-percent" id="tip-10pc"/><div>10%</div></label>
-        <label for="tip-15pc"><input type="radio" name="tip-percent" id="tip-15pc"/><div>15%</div></label>
-        <label for="tip-25pc"><input type="radio" name="tip-percent" id="tip-25pc"/><div>25%</div></label>
-        <label for="tip-50pc"><input type="radio" name="tip-percent" id="tip-50pc"/><div>50%</div></label>
+      <div class="tip-select-section" id="tip-select-section">
+        <label for="tip-5pc"><input type="radio" name="tip-percent" id="tip-5pc" class="radio"/><div>5%</div></label>
+        <label for="tip-10pc"><input type="radio" name="tip-percent" id="tip-10pc" class="radio"/><div>10%</div></label>
+        <label for="tip-15pc"><input type="radio" name="tip-percent" id="tip-15pc" class="radio"/><div>15%</div></label>
+        <label for="tip-25pc"><input type="radio" name="tip-percent" id="tip-25pc" class="radio"/><div>25%</div></label>
+        <label for="tip-50pc"><input type="radio" name="tip-percent" id="tip-50pc" class="radio"/><div>50%</div></label>
         
-        <input type="number" step="1" min="0" placeholder="Custom" class="num-input custom-input">
+        <input type="number" step="1" min="0" placeholder="Custom" class="num-input custom-input" id="input-custom">
       </div>
 
 
       <label>Number of People</label>
-      <input type="number" step="1" min="0" class="num-input input-no-ppl">
+      <input type="number" step="1" min="0" class="num-input input-no-ppl" id="input-no-ppl">
     </form>
 
     <section class="results-section">
@@ -45,14 +45,14 @@
           <h1>Tip Amount</h1>
           <p>/ person</p>
         </div>
-        <div class="result-display" id="tip-result-display">$4.27</div>
+        <div class="result-display" id="tip-result-display">$0.00</div>
       </div>
       <div class="result-line">
         <div class="result-label">
           <h1>Total</h1>
           <p>/ person</p>
         </div>
-        <div class="result-display" id="total-result-display">$32.79</div>
+        <div class="result-display" id="total-result-display">$0.00</div>
       </div>
 
       <button>Reset</button>
