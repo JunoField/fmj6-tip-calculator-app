@@ -5,7 +5,7 @@ for (var i = 0; i < radios.length; i++) {
 }
 
 
-document.getElementById("input-custom").addEventListener("keypress", customEntry);
+document.getElementById("input-custom").addEventListener("input", customEntry);
 
 document.getElementById("input-bill").addEventListener("keypress", updateForm);
 document.getElementById("input-no-ppl").addEventListener("keypress", updateForm);
