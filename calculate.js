@@ -1,3 +1,4 @@
+//Add all event listeners
 let radios = document.getElementsByClassName("radio");
 
 for (var i = 0; i < radios.length; i++) {
@@ -7,8 +8,8 @@ for (var i = 0; i < radios.length; i++) {
 
 document.getElementById("input-custom").addEventListener("input", customEntry);
 
-document.getElementById("input-bill").addEventListener("keypress", updateForm);
-document.getElementById("input-no-ppl").addEventListener("keypress", updateForm);
+document.getElementById("input-bill").addEventListener("keyup", updateForm);
+document.getElementById("input-no-ppl").addEventListener("keyup", updateForm);
 document.getElementById("button-reset").addEventListener("click", reset);
 
 
@@ -42,8 +43,14 @@ function updateForm(){
         var tipMultiplier = getSelectedTip() / 100;
     }
 
-    document.getElementById("tip-result-display").innerHTML = "$" + ((bill * tipMultiplier) / noPpl).toFixed(2);
-    document.getElementById("total-result-display").innerHTML = "$" + ((bill + bill * tipMultiplier) / noPpl).toFixed(2);
+    let tipResult = ((bill * tipMultiplier) / noPpl);
+    let totalResult = ((bill + bill * tipMultiplier) / noPpl);
+
+    if (tipResult > 0 && tipResult != Infinity){
+        document.getElementById("tip-result-display").innerHTML = "$" + tipResult.toFixed(2);
+        document.getElementById("total-result-display").innerHTML = "$" + totalResult.toFixed(2);
+
+    }
 
 }
 
