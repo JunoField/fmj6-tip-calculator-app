@@ -36,8 +36,18 @@ main{
 
 label{
     margin-bottom: 10px;
-    display: inline-block;
+    display: flex;
 }
+
+.error{
+    color: red;
+    margin: auto 0px auto auto;
+}
+
+.hidden{
+    display: none;
+}
+
 
 input{
     border: none;
@@ -88,7 +98,7 @@ input{
 
 .tip-select-section label{
     height: 48px;
-
+    display: inline-block;
 }
 
 input[type=radio]{
