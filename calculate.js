@@ -34,23 +34,39 @@ function customEntry(){
     updateForm();
 }
 
+function displayZeroError(inputField){
+    document.getElementById("error-" + inputField).classList.remove("hidden");
+    document.getElementById("input-" + inputField).classList.add("input-error");
+}
+
+function removeZeroErrors(){
+    document.getElementById("error-bill").classList.add("hidden");
+    document.getElementById("error-no-ppl").classList.add("hidden");
+    document.getElementById("input-bill").classList.remove("input-error");
+    document.getElementById("input-no-ppl").classList.remove("input-error");
+}
+
 function updateForm(){
-    let bill = parseFloat(document.getElementById("input-bill").value);
-    let noPpl = document.getElementById("input-no-ppl").value;
-    if (document.getElementById("input-custom").value != ""){
-        var tipMultiplier = document.getElementById("input-custom").value / 100;
+    removeZeroErrors();
+    if (document.getElementById("input-bill").value == 0){
+        displayZeroError("bill");
+    } else if(document.getElementById("input-no-ppl").value == 0){
+        displayZeroError("no-ppl");
     } else{
-        var tipMultiplier = getSelectedTip() / 100;
-    }
+        let bill = parseFloat(document.getElementById("input-bill").value);
+        let noPpl = document.getElementById("input-no-ppl").value;
+        if (document.getElementById("input-custom").value != ""){
+            var tipMultiplier = document.getElementById("input-custom").value / 100;
+        } else{
+            var tipMultiplier = getSelectedTip() / 100;
+        }
 
-    let tipResult = ((bill * tipMultiplier) / noPpl);
-    let totalResult = ((bill + bill * tipMultiplier) / noPpl);
-
-    if (tipResult > 0 && tipResult != Infinity){
+        let tipResult = ((bill * tipMultiplier) / noPpl);
+        let totalResult = ((bill + bill * tipMultiplier) / noPpl);  
         document.getElementById("tip-result-display").innerHTML = "$" + tipResult.toFixed(2);
         document.getElementById("total-result-display").innerHTML = "$" + totalResult.toFixed(2);
-
     }
+
 
 }
 

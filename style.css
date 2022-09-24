@@ -56,8 +56,12 @@ input{
     font-family: inherit;
 }
 
+.input-error{
+    border: 2px solid red;
+}
+
 .num-input{
-    -moz-appearance:textfield; /*Diable spinner (Firefox) */
+    -moz-appearance:textfield; /*Disable spinner (Firefox) */
     border-radius: 5px;
     width: 100%;
     padding-inline: 17px;

@@ -18,14 +18,14 @@
   <img src="./images/logo.svg" class="logo">
 
   <main>
-    <form id="input-form">
-      <label>Bill</label>
+    <form id="input-form" autocomplete="off">
+      <label>Bill<div class="error hidden" id="error-bill">Can't be zero</div></label>
       <input type="number" step="0.01" min="0.00" class="num-input input-bill" id="input-bill">
 
 
       <label>Select Tip %</label>
       <div class="tip-select-section" id="tip-select-section">
-        <label for="tip-5pc"><input type="radio" name="tip-percent" id="tip-5pc" class="radio"/><div>5%</div></label>
+        <label for="tip-5pc"><input type="radio" name="tip-percent" id="tip-5pc" class="radio" checked="checked"/><div>5%</div></label>
         <label for="tip-10pc"><input type="radio" name="tip-percent" id="tip-10pc" class="radio"/><div>10%</div></label>
         <label for="tip-15pc"><input type="radio" name="tip-percent" id="tip-15pc" class="radio"/><div>15%</div></label>
         <label for="tip-25pc"><input type="radio" name="tip-percent" id="tip-25pc" class="radio"/><div>25%</div></label>
@@ -35,7 +35,7 @@
       </div>
 
 
-      <label>Number of People<div class="error hidden" id="no-ppl-zero-error">Can't be zero</div></label>
+      <label>Number of People<div class="error hidden" id="error-no-ppl">Can't be zero</div></label>
       <input type="number" step="1" min="0" class="num-input input-no-ppl" id="input-no-ppl">
     </form>
 
